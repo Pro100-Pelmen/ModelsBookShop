@@ -1,0 +1,62 @@
+﻿<Window x:Class="ModelsBookShop.AddEmployerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ModelsBookShop"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterScreen"
+        Title="AddEmployerWindowWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel Grid.Column="1" Margin="0, 20">
+            <Label HorizontalAlignment="Center" Content="Регистрация" FontSize="20" FontFamily="SEGOU UI"/>
+
+            <StackPanel Margin="10, 20, 10, 20">
+                <TextBlock Text="Фамилия"/>
+                <TextBox x:Name="LastnameTb"/>
+
+                <TextBlock Text="Имя"/>
+                <TextBox x:Name="FirstnameTb"/>
+
+                <TextBlock Text="Отчество"/>
+                <TextBox x:Name="PatronymicTb"/>
+
+                <TextBlock Text="Телефон"/>
+                <TextBox x:Name="PhoneTb"/>
+
+                <TextBlock Text="Логин"/>
+                <TextBox x:Name="LoginTb"/>
+
+                <TextBlock Text="Пароль"/>
+                <TextBox x:Name="PasswordTb"/>
+            </StackPanel>
+
+            <StackPanel Margin="50, 0, 50, 0">
+
+                <Button Content="Зарегистрироваться" Padding="5" Margin="0, 10" Click="RegistrationUserCliked">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+
+                <Button Content="Назад" Padding="5" Click="BackClicked">
+                    <Button.Resources>
+                        <Style TargetType="Border">
+                            <Setter Property="CornerRadius" Value="10"/>
+                        </Style>
+                    </Button.Resources>
+                </Button>
+            </StackPanel>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
